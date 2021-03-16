@@ -1,0 +1,18 @@
+type Droid {
+    id: Int!
+    name: String!
+    battery_type: String!
+}
+
+input NewDroid {
+    name: String!
+    battery_type: String!
+}
+
+type Query {
+    getDroid(id: Int!): Droid!
+}
+
+type Mutation {
+    addNewDroid(input: NewDroid!): Droid!
+}

@@ -1,0 +1,38 @@
+type Droid {
+    id: Int!
+    name: String!
+    battery_type: String!
+}
+input NewDroid {
+    name: String!
+    battery_type: String!
+}
+
+type Jedi {
+    """
+    Let's say you have some comments
+    """
+    id: Int!
+    name: String!
+    light_saber_color: String!
+    droids: [Droid!]!
+}
+input NewJedi {
+    """
+    They're not gone even merged!
+    """
+    name: String!
+    light_saber_color: String!
+}
+
+type Query {
+    getDroid(id: Int!): Droid!
+    """
+    This could be handy for documentation
+    """
+    getJedi(id: Int!): Jedi!
+}
+type Mutation {
+    addNewDroid(input: NewDroid!): Droid!
+    addNewJedi(input: NewJedi!): Jedi!
+}
