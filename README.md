@@ -5,3 +5,7 @@ Usage:
     graphql-files-merger -h (or --help)
     graphql-files-merger <graphql-dir> <output-file-name.graphql>
 ```
+
+## TODO
+- [ ] Use GLOB for input path
+- [ ] Improve pattern matching
